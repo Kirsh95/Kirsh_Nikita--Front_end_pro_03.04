@@ -1,14 +1,6 @@
-let x = prompt("Введіть кількість годин");
-let time= parseInt(x) * 3600
+let x = Number (prompt('Перше число'));
+let y = Number (prompt('Друге число'));
+let z = Number (prompt('Трете число'));
 
-alert (`${time} секунд в ${x} годинах (-ні) `  )
 
-
-// alert(`
-// ${x} + ${y} = ${ parseInt(x)+parseInt(y)}
-// ${x} - ${y} = ${x - y}
-// ${x} * ${y} = ${x * y}
-// ${x} / ${y} = ${x / y}
-
-// `);
-
+alert(((x + y + z)/3).toFixed(2))
