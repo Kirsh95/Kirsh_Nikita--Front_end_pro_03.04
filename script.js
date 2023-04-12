@@ -1,30 +1,56 @@
-let numOrStr = prompt('input number or string');
-console.log(numOrStr)
+const age = Number(prompt("Введіть рік нардження"));
+const city = prompt("Введіть місто проживання");
+const sport = prompt("Введіть улюблений вид спорту");
 
+const ageCalc = new Date().getFullYear() - age;
+const capital = [ 'Київ', 'Вашингтон', 'Лондон' ]
+const sportCamp = {
+    'футбол': 'Леонель Месси',
+    'Формула 1': 'Макс Ферстапен',
+    'Баскетбол': 'Майкл Джордан'
 
-switch (true){
-
-    case numOrStr === null:
-        console.log('ви скасували');
-        break;
-    case numOrStr.trim() === '' :
-        console.log('Empty String');
-        break;
-    case isNaN( +numOrStr ):
-        console.log(' number is Ba_NaN');
-        break;
-        default:
-            console.log("OK!");
-        break
-    
 };
 
-// if(numOrStr = 5) {
-// console.log('ви скасували')
-// } else if( numOrStr.trim() === '' ) {
-// console.log('Empty String');
-// } else if ( isNaN( +numOrStr ) ) {
-// console.log(' number is Ba_NaN')
-// } else {
-// console.log('OK!')
-// }
+console.log(ageCalc)
+console.log(city)
+console.log(sport)
+
+
+if (age === null || city === null || sport === null) {
+    alert ( 'Шкода, що Ви не захотіли ввести свій(ю)  ');
+    if (age === null) {
+      alert('рік народження');
+    } else if (city === null) {
+      alert ('назву міста');
+    } else if (sport === null) {
+      alert ('вид спорту');
+    }
+  } 
+  
+  else {
+    alert (`Ваш вік: ${ageCalc}`);
+    // 
+    if (capital.includes(city)) {
+      switch (city) {
+        case 'Київ':
+          country = 'Україна';
+          break;
+        case 'Вашингтон':
+          country = 'США';
+          break;
+        case 'Лондон':
+          country = 'Великобританія';
+          break;
+      }
+      alert ( `Ти живеш у столиці ${country}`);
+    } else {
+      alert ( `Ти живеш у місті ${city}`);
+    }
+// 
+    if (sportCamp.hasOwnProperty(sport)) {
+      alert ( `Круто! Ти хочеш стати як ${sportCamp[sport]}?`);
+    }else {
+        alert( `Ти любиш ${sport}`)
+    }
+  }
+
