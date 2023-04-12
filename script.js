@@ -1,6 +1,30 @@
-let x = Number (prompt('Перше число'));
-let y = Number (prompt('Друге число'));
-let z = Number (prompt('Трете число'));
+let numOrStr = prompt('input number or string');
+console.log(numOrStr)
 
 
-alert(((x + y + z)/3).toFixed(2))
+switch (true){
+
+    case numOrStr === null:
+        console.log('ви скасували');
+        break;
+    case numOrStr.trim() === '' :
+        console.log('Empty String');
+        break;
+    case isNaN( +numOrStr ):
+        console.log(' number is Ba_NaN');
+        break;
+        default:
+            console.log("OK!");
+        break
+    
+};
+
+// if(numOrStr = 5) {
+// console.log('ви скасували')
+// } else if( numOrStr.trim() === '' ) {
+// console.log('Empty String');
+// } else if ( isNaN( +numOrStr ) ) {
+// console.log(' number is Ba_NaN')
+// } else {
+// console.log('OK!')
+// }
