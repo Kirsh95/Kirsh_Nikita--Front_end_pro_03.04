@@ -1,56 +1,60 @@
-const age = Number(prompt("Введіть рік нардження"));
-const city = prompt("Введіть місто проживання");
-const sport = prompt("Введіть улюблений вид спорту");
+// 1-----------------------------------------
+  // for( let i=20; i <= 30; i=i+0.5){
+    
+  //   console.log(i)
+  // }
 
-const ageCalc = new Date().getFullYear() - age;
-const capital = [ 'Київ', 'Вашингтон', 'Лондон' ]
-const sportCamp = {
-    'футбол': 'Леонель Месси',
-    'Формула 1': 'Макс Ферстапен',
-    'Баскетбол': 'Майкл Джордан'
+// 2 -----------------------------------------
 
-};
+// let doll=27
 
-console.log(ageCalc)
-console.log(city)
-console.log(sport)
+// for( let i=0; i<=100; i=i+10){
+//   console.log(i * doll)
+// }
 
+// 3------------------------------------------
 
-if (age === null || city === null || sport === null) {
-    alert ( 'Шкода, що Ви не захотіли ввести свій(ю)  ');
-    if (age === null) {
-      alert('рік народження');
-    } else if (city === null) {
-      alert ('назву міста');
-    } else if (sport === null) {
-      alert ('вид спорту');
-    }
-  } 
-  
-  else {
-    alert (`Ваш вік: ${ageCalc}`);
-    // 
-    if (capital.includes(city)) {
-      switch (city) {
-        case 'Київ':
-          country = 'Україна';
-          break;
-        case 'Вашингтон':
-          country = 'США';
-          break;
-        case 'Лондон':
-          country = 'Великобританія';
-          break;
-      }
-      alert ( `Ти живеш у столиці ${country}`);
-    } else {
-      alert ( `Ти живеш у місті ${city}`);
-    }
+// let x = Number(prompt("Будь ласка укажить число "));
 // 
-    if (sportCamp.hasOwnProperty(sport)) {
-      alert ( `Круто! Ти хочеш стати як ${sportCamp[sport]}?`);
-    }else {
-        alert( `Ти любиш ${sport}`)
-    }
-  }
+// for (let i= 1; i<=100; i++){
+//    if (i**2 <=x){
+//     console.log(i)
+//    }
+// }
 
+
+
+// 4------------------------------------------------
+
+
+// let y = Number(prompt("Будь ласка укажить число "));
+// console.log(y)
+
+// if( y > 1){
+//   for (let i=2; i<= y; i++){
+//     if(y % i === 0){
+//       console.log(i)
+//       prompt(`${y}, "не є простим числом"`)
+//       break
+//     } if (i === y - 1) {
+//       prompt(`${y}, "є простим числом"`)
+//       break
+//     }
+//   }
+// }
+// else{
+//   prompt(`${y}, "не є простим числом"`)
+// }
+
+// 5------------------------------------------------
+
+
+const number = parseInt(prompt("Введіть число: "));
+let temp = 1;
+while (temp < number) {
+  temp *= 3;
+}
+if (temp === number) {
+  console.log(`${number} можна отримати шляхом зведення числа 3 у деякий ступінь.`)} else {
+  console.log(`${number} не можна отримати шляхом зведення числа 3 у деякий ступінь.`);
+}
