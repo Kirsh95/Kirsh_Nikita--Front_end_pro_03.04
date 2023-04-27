@@ -1,60 +1,23 @@
-// 1-----------------------------------------
-  // for( let i=20; i <= 30; i=i+0.5){
-    
-  //   console.log(i)
-  // }
 
-// 2 -----------------------------------------
+let array = [1,2,3,4,5,6,7,8,9,10];
 
-// let doll=27
+ console.log(array.length)
 
-// for( let i=0; i<=100; i=i+10){
-//   console.log(i * doll)
-// }
+let item = 1;
 
-// 3------------------------------------------
+function removeElement(array, item) {
 
-// let x = Number(prompt("Будь ласка укажить число "));
-// 
-// for (let i= 1; i<=100; i++){
-//    if (i**2 <=x){
-//     console.log(i)
-//    }
-// }
+  console.log(array)
 
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === item) {
+      array.splice(i, 1);
+      i--;
+    }
+  }
+  return array;
+} 
 
+console.log(removeElement(array, item))
 
-// 4------------------------------------------------
-
-
-// let y = Number(prompt("Будь ласка укажить число "));
-// console.log(y)
-
-// if( y > 1){
-//   for (let i=2; i<= y; i++){
-//     if(y % i === 0){
-//       console.log(i)
-//       prompt(`${y}, "не є простим числом"`)
-//       break
-//     } if (i === y - 1) {
-//       prompt(`${y}, "є простим числом"`)
-//       break
-//     }
-//   }
-// }
-// else{
-//   prompt(`${y}, "не є простим числом"`)
-// }
-
-// 5------------------------------------------------
-
-
-const number = parseInt(prompt("Введіть число: "));
-let temp = 1;
-while (temp < number) {
-  temp *= 3;
-}
-if (temp === number) {
-  console.log(`${number} можна отримати шляхом зведення числа 3 у деякий ступінь.`)} else {
-  console.log(`${number} не можна отримати шляхом зведення числа 3 у деякий ступінь.`);
-}
+// removeElement()
