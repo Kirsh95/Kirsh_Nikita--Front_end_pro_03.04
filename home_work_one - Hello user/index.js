@@ -1,3 +1,9 @@
+function res(num, degree){
+    if (num ==1){
+        return num
+    }else {
+        return Math.pow (num , degree)
+    }
+}
 
-let one =  prompt('ввидите имя')
-alert("Helloy "+one+!" How are you?")
+console.log (res(5,2))
